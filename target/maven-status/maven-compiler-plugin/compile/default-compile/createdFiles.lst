@@ -1,0 +1,11 @@
+com\functions\serverless\PrestamoAzureHandler.class
+com\functions\azure\BibliotecaFunctionApp$Estudiante.class
+com\functions\serverless\PrestamoAzureHandler$Prestamo.class
+com\functions\serverless\LibroAzureHandler.class
+com\functions\serverless\LibroAzureHandler$Libro.class
+com\functions\azure\BibliotecaFunctionApp$GraphQlPayload.class
+com\functions\azure\BibliotecaFunctionApp$Prestamo.class
+com\functions\serverless\EstudianteAzureHandler$Estudiante.class
+com\functions\azure\BibliotecaFunctionApp.class
+com\functions\serverless\EstudianteAzureHandler.class
+com\functions\azure\BibliotecaFunctionApp$Libro.class

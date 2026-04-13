@@ -1,0 +1,16 @@
+{
+  "scriptFile" : "../biblioteca-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.functions.azure.BibliotecaFunctionApp.graphqlLibros",
+  "bindings" : [ {
+    "type" : "httpTrigger",
+    "direction" : "in",
+    "name" : "request",
+    "route" : "graphql/libros",
+    "methods" : [ "POST" ],
+    "authLevel" : "ANONYMOUS"
+  }, {
+    "type" : "http",
+    "direction" : "out",
+    "name" : "$return"
+  } ]
+}

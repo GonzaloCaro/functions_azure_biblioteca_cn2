@@ -1,0 +1,16 @@
+{
+  "scriptFile" : "../biblioteca-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.functions.azure.BibliotecaFunctionApp.restGetEstudiantes",
+  "bindings" : [ {
+    "type" : "httpTrigger",
+    "direction" : "in",
+    "name" : "request",
+    "route" : "rest/estudiantes",
+    "methods" : [ "GET" ],
+    "authLevel" : "ANONYMOUS"
+  }, {
+    "type" : "http",
+    "direction" : "out",
+    "name" : "$return"
+  } ]
+}
