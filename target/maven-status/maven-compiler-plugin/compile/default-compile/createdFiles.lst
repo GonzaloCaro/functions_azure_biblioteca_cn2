@@ -6,6 +6,9 @@ com\functions\serverless\LibroAzureHandler$Libro.class
 com\functions\azure\BibliotecaFunctionApp$GraphQlPayload.class
 com\functions\azure\BibliotecaFunctionApp$Prestamo.class
 com\functions\serverless\EstudianteAzureHandler$Estudiante.class
+com\functions\azure\EventGridApp.class
+com\functions\eventgrid\EventGridService.class
 com\functions\azure\BibliotecaFunctionApp.class
+com\functions\eventgrid\BibliotecaEventosConsumer.class
 com\functions\serverless\EstudianteAzureHandler.class
 com\functions\azure\BibliotecaFunctionApp$Libro.class

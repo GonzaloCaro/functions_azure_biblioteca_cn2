@@ -1,0 +1,21 @@
+{
+  "scriptFile" : "../biblioteca-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.functions.azure.EventGridApp.run",
+  "bindings" : [ {
+    "type" : "httpTrigger",
+    "direction" : "in",
+    "name" : "req",
+    "methods" : [ "POST" ],
+    "authLevel" : "ANONYMOUS"
+  }, {
+    "type" : "eventGrid",
+    "direction" : "out",
+    "name" : "outputEvent",
+    "topicKeySetting" : "EventGridTopicKey",
+    "topicEndpointUri" : "EventGridTopicEndpoint"
+  }, {
+    "type" : "http",
+    "direction" : "out",
+    "name" : "$return"
+  } ]
+}

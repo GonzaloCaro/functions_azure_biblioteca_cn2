@@ -1,0 +1,9 @@
+{
+  "scriptFile" : "../biblioteca-1.0-SNAPSHOT.jar",
+  "entryPoint" : "com.functions.eventgrid.BibliotecaEventosConsumer.onPrestamoCreado",
+  "bindings" : [ {
+    "type" : "eventGridTrigger",
+    "direction" : "in",
+    "name" : "event"
+  } ]
+}

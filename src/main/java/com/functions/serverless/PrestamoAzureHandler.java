@@ -1,5 +1,6 @@
 package com.functions.serverless;
 
+import com.functions.eventgrid.EventGridService;
 import com.google.gson.Gson;
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;
@@ -53,12 +54,22 @@ public class PrestamoAzureHandler {
                     String bodyPost = request.getBody();
                     Prestamo nuevoPrestamo = GSON.fromJson(bodyPost, Prestamo.class);
                     crearPrestamo(connection, nuevoPrestamo);
+                    EventGridService.publicarEvento(
+                            "/biblioteca/prestamos/" + nuevoPrestamo.id_estudiante + "/" + nuevoPrestamo.id_libro,
+                            "Biblioteca.Prestamo.Creado",
+                            nuevoPrestamo,
+                            context.getLogger());
                     return jsonResponse(request, HttpStatus.CREATED, "{\"mensaje\": \"Préstamo registrado exitosamente\"}");
 
                 case "PUT":
                     String bodyPut = request.getBody();
                     Prestamo prestamoReturn = GSON.fromJson(bodyPut, Prestamo.class);
                     devolverPrestamo(connection, prestamoReturn.id_prestamo);
+                    EventGridService.publicarEvento(
+                            "/biblioteca/prestamos/" + prestamoReturn.id_prestamo,
+                            "Biblioteca.Prestamo.Devuelto",
+                            prestamoReturn,
+                            context.getLogger());
                     return jsonResponse(request, HttpStatus.OK, "{\"mensaje\": \"Libro devuelto y préstamo actualizado exitosamente\"}");
 
                 case "DELETE":

@@ -1,5 +1,6 @@
 package com.functions.serverless;
 
+import com.functions.eventgrid.EventGridService;
 import com.google.gson.Gson;
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;
@@ -53,6 +54,11 @@ public class LibroAzureHandler {
                     String bodyPost = request.getBody();
                     Libro nuevoLibro = GSON.fromJson(bodyPost, Libro.class);
                     crearLibro(connection, nuevoLibro);
+                    EventGridService.publicarEvento(
+                            "/biblioteca/libros/" + nuevoLibro.isbn,
+                            "Biblioteca.Libro.Creado",
+                            nuevoLibro,
+                            context.getLogger());
                     return jsonResponse(request, HttpStatus.CREATED, "{\"mensaje\": \"Libro creado exitosamente\"}");
 
                 case "PUT":
