@@ -1,6 +1,8 @@
 package com.functions.serverless;
 
+import com.functions.eventgrid.EventGridService;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;
 import com.microsoft.azure.functions.HttpRequestMessage;
@@ -67,6 +69,16 @@ public class EstudianteAzureHandler {
                         return jsonResponse(request, HttpStatus.BAD_REQUEST, "{\"error\": \"Se requiere parámetro id\"}");
                     }
                     eliminarEstudiante(connection, id);
+
+                    // Publicar evento de eliminación de estudiante para limpieza automática de préstamos
+                    JsonObject eventData = new JsonObject();
+                    eventData.addProperty("id_estudiante", Integer.parseInt(id));
+                    EventGridService.publicarEvento(
+                            "/biblioteca/estudiantes/" + id,
+                            "Biblioteca.Estudiante.Eliminado",
+                            eventData,
+                            context.getLogger());
+
                     return jsonResponse(request, HttpStatus.OK, "{\"mensaje\": \"Estudiante eliminado exitosamente\"}");
 
                 default:

@@ -1,7 +1,7 @@
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\azure\BibliotecaFunctionApp.java
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\serverless\LibroAzureHandler.java
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\serverless\PrestamoAzureHandler.java
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\eventgrid\EventGridService.java
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\eventgrid\BibliotecaEventosConsumer.java
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\azure\EventGridApp.java
-C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\Act Sum II\functions_azure\src\main\java\com\functions\serverless\EstudianteAzureHandler.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\serverless\EstudianteAzureHandler.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\serverless\PrestamoAzureHandler.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\azure\EventGridApp.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\eventgrid\BibliotecaEventosConsumer.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\serverless\LibroAzureHandler.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\eventgrid\EventGridService.java
+C:\Users\lokii\OneDrive\Desktop\U 2025\2026\Desarrollo Cloud Native II\EFT\Proyecto\functions_azure\src\main\java\com\functions\azure\BibliotecaFunctionApp.java
